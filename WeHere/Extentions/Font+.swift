@@ -23,6 +23,6 @@ struct FontTheme {
     let body1 = Font.custom(sfpro, size: 17).weight(.regular)
     let body2 = Font.custom(sfpro, size: 15).weight(.regular)
     let callout = Font.custom(sfpro, size: 16).weight(.semibold)
-    let subhead = Font.custom(sfpro, size: 15).weight(.medium)
+    let subhead = Font.custom(sfpro, size: 16).weight(.semibold)
     let footnote = Font.custom(sfpro, size: 13).weight(.regular)
 }
