@@ -12,6 +12,9 @@
 		5F3320722902A9AE006B989F /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3320712902A9AE006B989F /* ExampleModel.swift */; };
 		5F3320752902AAC5006B989F /* ExtentionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3320742902AAC5006B989F /* ExtentionExample.swift */; };
 		5F3320782902AAE3006B989F /* ManagerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3320772902AAE3006B989F /* ManagerExample.swift */; };
+		5F5F0E58290E6CFC0091CEB6 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F0E57290E6CFC0091CEB6 /* Font+.swift */; };
+		5F5F0E5A290E6D710091CEB6 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F5F0E56290E6CF10091CEB6 /* SF-Pro.ttf */; };
+		5F5F0E5C290E6F330091CEB6 /* Ansungtangmyun-ESG.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F5F0E5B290E6F330091CEB6 /* Ansungtangmyun-ESG.otf */; };
 		5F6A48EA28FA764A004CD7C0 /* WeHereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6A48E928FA764A004CD7C0 /* WeHereApp.swift */; };
 		5F6A48EC28FA764A004CD7C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6A48EB28FA764A004CD7C0 /* ContentView.swift */; };
 		5F6A48EE28FA764B004CD7C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A48ED28FA764B004CD7C0 /* Assets.xcassets */; };
@@ -32,6 +35,10 @@
 		5F3320712902A9AE006B989F /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
 		5F3320742902AAC5006B989F /* ExtentionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionExample.swift; sourceTree = "<group>"; };
 		5F3320772902AAE3006B989F /* ManagerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerExample.swift; sourceTree = "<group>"; };
+		5F5F0E56290E6CF10091CEB6 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		5F5F0E57290E6CFC0091CEB6 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		5F5F0E59290E6D2D0091CEB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5F5F0E5B290E6F330091CEB6 /* Ansungtangmyun-ESG.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ansungtangmyun-ESG.otf"; sourceTree = "<group>"; };
 		5F6A48E628FA764A004CD7C0 /* WeHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F6A48E928FA764A004CD7C0 /* WeHereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeHereApp.swift; sourceTree = "<group>"; };
 		5F6A48EB28FA764A004CD7C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				5F3320742902AAC5006B989F /* ExtentionExample.swift */,
+				5F5F0E57290E6CFC0091CEB6 /* Font+.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -102,6 +110,8 @@
 		5F3320792902AAEC006B989F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				5F5F0E5B290E6F330091CEB6 /* Ansungtangmyun-ESG.otf */,
+				5F5F0E56290E6CF10091CEB6 /* SF-Pro.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -125,6 +135,7 @@
 		5F6A48E828FA764A004CD7C0 /* WeHere */ = {
 			isa = PBXGroup;
 			children = (
+				5F5F0E59290E6D2D0091CEB6 /* Info.plist */,
 				5F3320792902AAEC006B989F /* Fonts */,
 				5F3320762902AACE006B989F /* Managers */,
 				5F3320732902AAAA006B989F /* Extentions */,
@@ -219,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F6A48F128FA764B004CD7C0 /* Preview Assets.xcassets in Resources */,
+				5F5F0E5C290E6F330091CEB6 /* Ansungtangmyun-ESG.otf in Resources */,
+				5F5F0E5A290E6D710091CEB6 /* SF-Pro.ttf in Resources */,
 				5F6A48EE28FA764B004CD7C0 /* Assets.xcassets in Resources */,
 				5F7D4A8A28FC642B00FFF083 /* GoogleService-Info.plist in Resources */,
 			);
@@ -253,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F5F0E58290E6CFC0091CEB6 /* Font+.swift in Sources */,
 				5F6A48EC28FA764A004CD7C0 /* ContentView.swift in Sources */,
 				5F33206D2902A984006B989F /* MainView.swift in Sources */,
 				5F6A48EA28FA764A004CD7C0 /* WeHereApp.swift in Sources */,
@@ -390,6 +404,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeHere/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeHere/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -421,6 +436,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeHere/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeHere/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
