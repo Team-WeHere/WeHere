@@ -10,10 +10,10 @@ import SwiftUI
 private let sfpro = "SF-Pro"
 
 extension Font {
-    static let theme = Theme()
+    static let theme = FontTheme()
 }
 
-struct Theme {
+struct FontTheme {
     fileprivate init () { }
     
     let largeTitle = Font.custom(sfpro, size: 34).weight(.bold)
