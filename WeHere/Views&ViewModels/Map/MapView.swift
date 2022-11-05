@@ -26,7 +26,6 @@ struct MapView: View {
                 }
             })
             .ignoresSafeArea()
-            .accentColor(Color(.systemMint))
             .onAppear {
                 viewModel.checkIfLocationServicesIsEnabled()
             }
