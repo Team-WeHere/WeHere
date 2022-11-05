@@ -25,7 +25,7 @@ extension Color {
     static let pink01 = Color(hex: "#F9CFD0")
     static let pink02 = Color(hex: "#F99592")
     static let yellow01 = Color(hex: "#FFECC8")
-    static let yello02 = Color(hex: "#FFD179")
+    static let yellow02 = Color(hex: "#FFD179")
     static let grren01 = Color(hex: "#EAF3C3")
     static let green02 = Color(hex: "#B8CC5C")
     static let blue01 = Color(hex: "#CFDBF6")
@@ -38,4 +38,11 @@ extension Color {
     static let gray03 = Color(hex: "#AAB2BD")
     static let gray04 = Color(hex: "#CCD0D9")
     static let gray05 = Color(hex: "#E6E9EE")
+    
+    // Heart Profile
+    static let gradient1 = Color(hex: "#F9CFD0")
+    static let gradient2 = Color(hex: "#FFEFD1")
+    static let gradient3 = Color(hex: "#DACFDF")
+    static let gradient4 = Color(hex: "#D2D9E9")
+    static let gradient5 = Color(hex: "#E6E4F1")
 }

@@ -1,5 +1,5 @@
 //
-//  Pin.swift
+//  PinView.swift
 //  WeHere
 //
 //  Created by Chanhee Jeong on 2022/11/05.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Pin: View {
+struct PinView: View {
     var category: Category
     
     var body: some View {
@@ -42,6 +42,6 @@ struct Pin: View {
 
 struct Pin_Previews: PreviewProvider {
     static var previews: some View {
-        Pin(category: Category.mockData[0])
+        PinView(category: Category.mockData[0])
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 extension Category {
     static let mockData: [Category] = [
         Category(name: "cafe", icon: "cup.and.saucer.fill", color: Color.pink02),
-        Category(name: "drink", icon: "wineglass.fill", color: Color.yello02),
+        Category(name: "drink", icon: "wineglass.fill", color: Color.yellow02),
         Category(name: "food", icon: "fork.knife", color: Color.green02),
         Category(name: "culture", icon: "ticket.fill", color: Color.blue02),
         Category(name: "etc", icon: "guitars.fill", color: Color.purple02),
