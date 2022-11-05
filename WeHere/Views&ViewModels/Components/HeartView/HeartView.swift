@@ -11,6 +11,7 @@ struct HeartView: View {
     var width: CGFloat = 100
     var height: CGFloat = 100
     var hasStroke = true
+    var image = "sample-profile"
     
     private let gradient = LinearGradient(gradient: Gradient(stops: [
         Gradient.Stop(color: Color.gradient1, location: 0.15),
@@ -22,7 +23,7 @@ struct HeartView: View {
     
     var body: some View {
         ZStack {
-            Image("sample-profile", label: Text("ControlButton"))
+            Image(image, label: Text("ControlButton"))
                 .resizable()
                 .scaledToFill()
                 .frame(width: width, height: height)
