@@ -11,8 +11,8 @@ import SwiftUI
 enum MapSetup {
     static let defaultLocation = CLLocationCoordinate2D(latitude: 36.0197223,
                                                          longitude: 129.3250806)
-    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.02,
-                                              longitudeDelta: 0.02)
+    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.01,
+                                              longitudeDelta: 0.01)
 }
 
 final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {

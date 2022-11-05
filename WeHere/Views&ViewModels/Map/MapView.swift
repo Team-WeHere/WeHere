@@ -16,15 +16,13 @@ struct MapView: View {
             Map(coordinateRegion: $viewModel.mapRegion,
                 showsUserLocation: true, annotationItems: viewModel.places,
                 annotationContent: { location in
-                MapMarker(coordinate: location.coordinates, tint: .blue)
-//                MapAnnotation(coordinate: location.coordinates) {
-//                    LocationMapAnnotationView()
-//                        .scaleEffect(viewModel.selectedPlace == location ? 1 : 0.7)
-//                        .shadow(radius: 10)
-//                        .onTapGesture {
-//                            viewModel.showNextLocation(place: location)
-//                        }
-//                }
+                MapAnnotation(coordinate: location.coordinates) {
+                    Pin()
+                        .scaleEffect(viewModel.selectedPlace == location ? 1 : 0.75)
+                        .onTapGesture {
+                            viewModel.updateSelectedPlace(place: location)
+                        }
+                }
             })
             .ignoresSafeArea()
             .accentColor(Color(.systemMint))
