@@ -17,7 +17,7 @@ struct MapView: View {
                 showsUserLocation: true, annotationItems: viewModel.places,
                 annotationContent: { location in
                 MapAnnotation(coordinate: location.coordinates) {
-                    Pin()
+                    Pin(category: location.category)
                         .scaleEffect(viewModel.selectedPlace == location ? 1 : 0.75)
                         .onTapGesture {
                             viewModel.updateSelectedPlace(place: location)

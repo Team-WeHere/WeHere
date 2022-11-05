@@ -8,23 +8,33 @@
 import SwiftUI
 
 struct Pin: View {
+    var category: Category
+    
     var body: some View {
         ZStack {
+            // IMAGE PIN
+            Image(category.name, label: Text(category.name))
+                .resizable()
+                .scaledToFill()
+            
+            /* CUSTOM PIN
             PinShape()
                 .frame(width: 45, height: 45)
-                .foregroundColor(.red)
-            
+                .foregroundColor(category.color)
+
             Circle()
                 .frame(width: 22, height: 22)
                 .foregroundColor(.white)
                 .offset(x: 0, y: -4)
-            
-            Image(systemName: "heart.fill")
+
+            Image(systemName: category.icon)
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
                 .frame(width: 12, height: 12)
-                .foregroundColor(.gray)
+                .padding()
+                .foregroundColor(.gray02)
                 .offset(x: 0, y: -4)
+            */
         }
         .padding(.bottom, 40)
     }
@@ -32,6 +42,6 @@ struct Pin: View {
 
 struct Pin_Previews: PreviewProvider {
     static var previews: some View {
-        Pin()
+        Pin(category: Category.mockData[0])
     }
 }
