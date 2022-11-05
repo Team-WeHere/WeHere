@@ -31,6 +31,7 @@
 		A75B09B329165B0A00869081 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09B229165B0A00869081 /* MockData.swift */; };
 		A75B09BD2916710B00869081 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09BC2916710B00869081 /* Pin.swift */; };
 		A75B09BF29167A9600869081 /* PinShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09BE29167A9600869081 /* PinShape.swift */; };
+		A75B09C129168C7700869081 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09C029168C7700869081 /* Color+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A75B09B229165B0A00869081 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		A75B09BC2916710B00869081 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		A75B09BE29167A9600869081 /* PinShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinShape.swift; sourceTree = "<group>"; };
+		A75B09C029168C7700869081 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				5F3320742902AAC5006B989F /* ExtentionExample.swift */,
+				A75B09C029168C7700869081 /* Color+.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F6A48EC28FA764A004CD7C0 /* ContentView.swift in Sources */,
+				A75B09C129168C7700869081 /* Color+.swift in Sources */,
 				A75B09B329165B0A00869081 /* MockData.swift in Sources */,
 				A75B09A329164D6D00869081 /* MapView.swift in Sources */,
 				5F33206D2902A984006B989F /* MainView.swift in Sources */,
@@ -440,6 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeHere/Preview Content\"";
+				DEVELOPMENT_TEAM = 562Z37RH3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -472,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeHere/Preview Content\"";
+				DEVELOPMENT_TEAM = 562Z37RH3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
