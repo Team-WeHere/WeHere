@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct WeHereApp: App {
+    
+    @StateObject private var vm = MapViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            MapView()
+                .environmentObject(vm)
         }
     }
 }

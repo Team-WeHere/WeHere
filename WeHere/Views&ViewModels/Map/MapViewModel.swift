@@ -6,19 +6,34 @@
 //
 
 import MapKit
-import Foundation
+import SwiftUI
 
 enum MapSetup {
     static let defaultLocation = CLLocationCoordinate2D(latitude: 36.0197223,
                                                          longitude: 129.3250806)
-    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.05,
-                                              longitudeDelta: 0.05)
+    static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.02,
+                                              longitudeDelta: 0.02)
 }
 
-final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+    @Published var places: [Place]
+    @Published var selectedPlace: Place?
     @Published var mapRegion = MKCoordinateRegion(center: MapSetup.defaultLocation, span: MapSetup.defaultSpan)
     
     var locationManager: CLLocationManager?
+
+    override init() {
+        let places = Place.mockData
+        self.places = places
+    }
+    
+    func updateSelectedPlace(place: Place) {
+        withAnimation(.easeInOut) {
+            selectedPlace = place
+            mapRegion = MKCoordinateRegion(center: place.coordinates,
+                                           span: MapSetup.defaultSpan)
+        }
+    }
     
     func checkIfLocationServicesIsEnabled() {
         self.locationManager = CLLocationManager()
@@ -50,7 +65,6 @@ final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDeleg
             print("Go to settings")
             
         case .authorizedAlways, .authorizedWhenInUse:
-            
             mapRegion = MKCoordinateRegion(center: locationManager.location!.coordinate,
                                         span: MapSetup.defaultSpan)
             
