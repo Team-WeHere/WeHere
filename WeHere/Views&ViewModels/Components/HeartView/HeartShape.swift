@@ -7,8 +7,13 @@
 
 import SwiftUI
 
-func heartPath(width: CGFloat, height: CGFloat) -> Path { 
-    Path { path in
+struct HeartShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        let width: CGFloat = rect.width
+        let height: CGFloat = rect.height
+        
         path.move(to: CGPoint(x: 0*width, y: 0.3654*height))
         
         path.addCurve(to: CGPoint(x: 0.2805*width, y: 0.0543*height),
@@ -46,5 +51,7 @@ func heartPath(width: CGFloat, height: CGFloat) -> Path {
         path.addCurve(to: CGPoint(x: 0*width, y: 0.3654*height),
                       control1: CGPoint(x: 0.1798*width, y: 0.8007*height),
                       control2: CGPoint(x: 0*width, y: 0.5849*height))
+        
+        return path
     }
 }

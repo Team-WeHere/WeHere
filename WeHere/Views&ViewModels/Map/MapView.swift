@@ -124,6 +124,9 @@ extension MapView {
                         .animation(.easeInOut(duration: 0.5).delay(0.5), value: showFabAnimation)
                         .onTapGesture {
                             self.showFabAnimation.toggle()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.48) {
+                                HapticManager.instance.notification(type: .success)
+                            }
                         }
                     Spacer()
                 }

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HeartView: View {
+    var width: CGFloat = 100
+    var height: CGFloat = 100
+    var hasStroke = true
+    
     private let gradient = LinearGradient(gradient: Gradient(stops: [
         Gradient.Stop(color: Color.gradient1, location: 0.15),
         Gradient.Stop(color: Color.gradient2, location: 0.3),
@@ -16,17 +20,15 @@ struct HeartView: View {
         Gradient.Stop(color: Color.gradient5, location: 0.75)
     ]), startPoint: .topTrailing, endPoint: .bottomLeading)
     
-    var hasStroke = true
-    
     var body: some View {
         ZStack {
             Image("sample-profile", label: Text("ControlButton"))
                 .resizable()
                 .scaledToFill()
-                .frame(width: 100, height: 100)
-                .clipShape(heartPath(width: 100, height: 100))
+                .frame(width: width, height: height)
+                .clipShape(HeartShape())
                 .overlay(
-                    heartPath(width: 100, height: 100)
+                    HeartShape()
                         .stroke(gradient, lineWidth: hasStroke ? 5 : 0)
                 )
         }
