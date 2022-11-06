@@ -11,13 +11,7 @@ struct PinView: View {
     var category: Category
     
     var body: some View {
-        ZStack {
-            // IMAGE PIN
-            Image(category.name, label: Text(category.name))
-                .resizable()
-                .scaledToFill()
-            
-            /* CUSTOM PIN
+        ZStack {     
             PinShape()
                 .frame(width: 45, height: 45)
                 .foregroundColor(category.color)
@@ -34,7 +28,6 @@ struct PinView: View {
                 .padding()
                 .foregroundColor(.gray02)
                 .offset(x: 0, y: -4)
-            */
         }
         .padding(.bottom, 40)
     }
