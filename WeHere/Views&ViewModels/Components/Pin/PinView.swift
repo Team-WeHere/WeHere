@@ -11,7 +11,7 @@ struct PinView: View {
     var category: Category
     
     var body: some View {
-        ZStack {     
+        ZStack {
             PinShape()
                 .frame(width: 45, height: 45)
                 .foregroundColor(category.color)

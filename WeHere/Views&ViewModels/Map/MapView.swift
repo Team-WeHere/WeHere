@@ -56,7 +56,7 @@ extension MapView {
                         .offset(x: showFabAnimation ? -(49.5+26) : 0,
                                 y: showFabAnimation ? (17+26) : 0)
                         .rotationEffect(.degrees(showFabAnimation ? 0 : 90))
-                        .animation(.easeInOut(duration: 0.5).delay(0.5), value: showFabAnimation)
+                        .animation(.easeInOut(duration: 0.5), value: showFabAnimation)
                     Spacer()
                 }
                 
@@ -69,7 +69,7 @@ extension MapView {
                         .offset(x: showFabAnimation ? -(65.5+26) : 0,
                                 y: showFabAnimation ? -(1+26) : 0)
                         .rotationEffect(.degrees(showFabAnimation ? 0 : 90))
-                        .animation(.easeInOut(duration: 0.5).delay(0.5), value: showFabAnimation)
+                        .animation(.easeInOut(duration: 0.5), value: showFabAnimation)
                     Spacer()
                 }
                 
@@ -82,10 +82,10 @@ extension MapView {
                         .offset(x: showFabAnimation ? -(15.5+26) : 0,
                                 y: showFabAnimation ? -(61+26) : 0)
                         .rotationEffect(.degrees(showFabAnimation ? 0 : 90))
-                        .animation(.easeInOut(duration: 0.5).delay(0.5), value: showFabAnimation)
+                        .animation(.easeInOut(duration: 0.5), value: showFabAnimation)
                     Spacer()
                 }
-                 
+                
                 HStack {
                     Spacer()
                     Image("ic-culture-circle", label: Text("Culture Pins"))
@@ -95,7 +95,7 @@ extension MapView {
                         .offset(x: showFabAnimation ? (15.5+26) : 0,
                                 y: showFabAnimation ? -(61+26) : 0)
                         .rotationEffect(.degrees(showFabAnimation ? 0 : 90))
-                        .animation(.easeInOut(duration: 0.5).delay(0.5), value: showFabAnimation)
+                        .animation(.easeInOut(duration: 0.5), value: showFabAnimation)
                     Spacer()
                 }
                 
@@ -108,7 +108,7 @@ extension MapView {
                         .offset(x: showFabAnimation ? (65.5+26) : 0,
                                 y: showFabAnimation ? -(1+26) : 0)
                         .rotationEffect(.degrees(showFabAnimation ? 0 : 90))
-                        .animation(.easeInOut(duration: 0.5).delay(0.5), value: showFabAnimation)
+                        .animation(.easeInOut(duration: 0.5), value: showFabAnimation)
                     Spacer()
                 }
                 
@@ -121,30 +121,37 @@ extension MapView {
                         .offset(x: showFabAnimation ? (49.5+26) : 0,
                                 y: showFabAnimation ? (17+26) : 0)
                         .rotationEffect(.degrees(showFabAnimation ? 0 : 90))
-                        .animation(.easeInOut(duration: 0.5).delay(0.5), value: showFabAnimation)
+                        .animation(.easeInOut(duration: 0.5), value: showFabAnimation)
                         .onTapGesture {
                             self.showFabAnimation.toggle()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.48) {
-                                HapticManager.instance.notification(type: .success)
-                            }
+                            HapticManager.instance.notification(type: .success)
                         }
                     Spacer()
                 }
-                 
+                
                 HStack {
                     Spacer()
-                    HeartView()
-                        .frame(width: 92, height: 92)
-                        .onTapGesture {
-                            self.showFabAnimation.toggle()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.48) {
-                                HapticManager.instance.notification(type: .success)
-                            }
-                        }
+                    
+                    Button {
+                        self.showFabAnimation.toggle()
+                        HapticManager.instance.notification(type: .success)
+                    } label: {
+                        HeartView()
+                            .frame(width: 92, height: 92)
+                    }
+                    .buttonStyle(ScalableButtonStyle())
                     Spacer()
                 }
             }
             .padding(.bottom, 31)
         }
+    }
+}
+
+struct ScalableButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 1.1 : 1)
+            .background(.clear)
     }
 }
