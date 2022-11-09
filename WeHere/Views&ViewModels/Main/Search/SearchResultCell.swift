@@ -37,9 +37,3 @@ struct SearchResultCell: View {
         .frame(height: 88)
     }
 }
-
-//struct SearchResultCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchResultCell(item: .init())
-//    }
-//}
