@@ -35,13 +35,6 @@ struct MapView: View {
     }
 }
 
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView()
-            .environmentObject(MapViewModel())
-    }
-}
-
 extension MapView {
     private var fabButton: some View {
         VStack {
@@ -145,5 +138,12 @@ extension MapView {
             }
             .padding(.bottom, 31)
         }
+    }
+}
+
+struct MapView_Previews: PreviewProvider {
+    static var previews: some View {
+        MapView()
+            .environmentObject(MapViewModel())
     }
 }
