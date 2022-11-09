@@ -124,7 +124,7 @@ extension MapView {
                         .animation(.easeInOut(duration: 0.5), value: showFabAnimation)
                         .onTapGesture {
                             self.showFabAnimation.toggle()
-                            HapticManager.instance.notification(type: .success)
+                            HapticManager.shared.notification(type: .success)
                         }
                     Spacer()
                 }
@@ -134,7 +134,7 @@ extension MapView {
                     
                     Button {
                         self.showFabAnimation.toggle()
-                        HapticManager.instance.notification(type: .success)
+                        HapticManager.shared.notification(type: .success)
                     } label: {
                         HeartView()
                             .frame(width: 92, height: 92)
