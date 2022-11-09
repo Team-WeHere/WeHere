@@ -22,6 +22,7 @@
 		5F7D4A9528FC660C00FFF083 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7D4A9428FC660C00FFF083 /* FirebaseFirestore */; };
 		5F7D4A9728FC660C00FFF083 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7D4A9628FC660C00FFF083 /* FirebaseInAppMessaging-Beta */; };
 		5F7D4A9928FC660C00FFF083 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7D4A9828FC660C00FFF083 /* FirebaseMessaging */; };
+		A716C0A7291BD0E500B0614F /* ScalableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A716C0A6291BD0E500B0614F /* ScalableButtonStyle.swift */; };
 		A75B09A029162DBD00869081 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A75B099F29162DBD00869081 /* GoogleService-Info.plist */; };
 		A75B09A329164D6D00869081 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09A229164D6D00869081 /* MapView.swift */; };
 		A75B09A729164D7E00869081 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09A629164D7E00869081 /* MapViewModel.swift */; };
@@ -47,6 +48,7 @@
 		5F6A48EB28FA764A004CD7C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5F6A48ED28FA764B004CD7C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F6A48F028FA764B004CD7C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A716C0A6291BD0E500B0614F /* ScalableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalableButtonStyle.swift; sourceTree = "<group>"; };
 		A75B099F29162DBD00869081 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A75B09A229164D6D00869081 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A75B09A629164D7E00869081 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A716C0A5291BD0D000B0614F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				A716C0A6291BD0E500B0614F /* ScalableButtonStyle.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		A75B09A129164D6300869081 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,7 @@
 		A75B09B82916655D00869081 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A716C0A5291BD0D000B0614F /* Button */,
 				A75B09C22916923200869081 /* HeartView */,
 				A75B09B92916656500869081 /* Pin */,
 			);
@@ -329,6 +340,7 @@
 				A75B09A929164E7800869081 /* Place.swift in Sources */,
 				5F6A48EA28FA764A004CD7C0 /* WeHereApp.swift in Sources */,
 				A75B09BD2916710B00869081 /* PinView.swift in Sources */,
+				A716C0A7291BD0E500B0614F /* ScalableButtonStyle.swift in Sources */,
 				5F3320782902AAE3006B989F /* ManagerExample.swift in Sources */,
 				5F3320752902AAC5006B989F /* ExtentionExample.swift in Sources */,
 				5F33206F2902A992006B989F /* MainViewModel.swift in Sources */,
