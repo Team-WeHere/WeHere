@@ -11,14 +11,14 @@ import MapKit
 struct SearchResultCell: View {
     @Binding var item: MKMapItem
     var address: String {
-        guard let administration = item.placemark.administrativeArea,
-              let city = item.placemark.locality,
-              let subCity = item.placemark.subLocality,
-              let street = item.placemark.thoroughfare,
-              let subStreet = item.placemark.subThoroughfare
+        guard let sido = item.placemark.administrativeArea,
+              let gugun = item.placemark.locality,
+              let dong = item.placemark.subLocality,
+              let road = item.placemark.thoroughfare,
+              let subRoad = item.placemark.subThoroughfare
         else { return "표시할 수 없습니다."}
         
-        return administration + " " + city + " " + subCity + " " + street + " " + subStreet
+        return sido + " " + gugun + " " + dong + " " + road + " " + subRoad
     }
     
     var body: some View {
