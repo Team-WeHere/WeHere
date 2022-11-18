@@ -5,8 +5,8 @@
 //  Created by Inho Choi on 2022/10/30.
 //
 
-import SwiftUI
 import MapKit
+import SwiftUI
 
 struct SearchView: View {
     @State var isSearch = false
@@ -36,18 +36,19 @@ private extension SearchView {
                 searchResults.removeAll()
             },
                label: {
-            ZStack(alignment: .center) {
-                Circle()
-                    .foregroundColor(.white)
-                if isSearch {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.black)
-                } else {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.black)
-                }
+            if isSearch {
+                Image(systemName: "xmark")
+                  .foregroundColor(.white)
+                  .frame(width: 44, height: 44)
+                  .background(.white)
+                  .clipShape(Circle())
+            } else {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.black)
+                    .frame(width: 44, height: 44)
+                    .background(.white)
+                    .clipShape(Circle())
             }
-            .frame(width: 44, height: 44)
         })
     }
     
@@ -72,13 +73,13 @@ private extension SearchView {
     }
 }
 
-// MARK: Logic ViewModel 분리할 것
+// TODO: Logic ViewModel 분리할 것
 private extension SearchView {
     func searchAction() {
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = searchKeyword
 
-        // MARK: LocationManager 정하면 지정하기
+        // TODO: LocationManager 정하면 지정하기
         searchRequest.region = .init(center: CLLocationCoordinate2D(latitude: 36.0144, longitude: 129.3257),
                                      latitudinalMeters: 1000,
                                      longitudinalMeters: 1000)
