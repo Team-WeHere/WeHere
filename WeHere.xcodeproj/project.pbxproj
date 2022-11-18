@@ -22,6 +22,7 @@
 		5F6A48EE28FA764B004CD7C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A48ED28FA764B004CD7C0 /* Assets.xcassets */; };
 		5F6A48F128FA764B004CD7C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A48F028FA764B004CD7C0 /* Preview Assets.xcassets */; };
 		5F7D4A8A28FC642B00FFF083 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F7D4A8928FC642B00FFF083 /* GoogleService-Info.plist */; };
+		5FCA879B2927FC8A00AC43C3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA879A2927FC8A00AC43C3 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		5F6A48ED28FA764B004CD7C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F6A48F028FA764B004CD7C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5F7D4A8928FC642B00FFF083 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5FCA879A2927FC8A00AC43C3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		5F33206A2902A963006B989F /* Views&ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5FCA87992927FC7000AC43C3 /* Profile */,
 				5F33206B2902A974006B989F /* Main */,
 			);
 			path = "Views&ViewModels";
@@ -156,6 +159,14 @@
 				5F6A48F028FA764B004CD7C0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5FCA87992927FC7000AC43C3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5FCA879A2927FC8A00AC43C3 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				5F5F0E65290E9FC00091CEB6 /* SearchView.swift in Sources */,
 				5F5F0E58290E6CFC0091CEB6 /* Font+.swift in Sources */,
 				5F6A48EC28FA764A004CD7C0 /* ContentView.swift in Sources */,
+				5FCA879B2927FC8A00AC43C3 /* ProfileView.swift in Sources */,
 				5F33206D2902A984006B989F /* MainView.swift in Sources */,
 				5F6A48EA28FA764A004CD7C0 /* WeHereApp.swift in Sources */,
 				5F3320782902AAE3006B989F /* ManagerExample.swift in Sources */,

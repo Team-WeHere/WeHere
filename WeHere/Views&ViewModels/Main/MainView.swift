@@ -62,7 +62,7 @@ private extension MainView {
     }
     
     var profileButton: some View {
-        NavigationLink(destination: { Text("Person") },
+        NavigationLink(destination: { ProfileView() },
                        label: {
             Image(systemName: "person.fill")
                .foregroundColor(.black)
