@@ -15,7 +15,6 @@
 		5F5F0E58290E6CFC0091CEB6 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F0E57290E6CFC0091CEB6 /* Font+.swift */; };
 		5F5F0E5A290E6D710091CEB6 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F5F0E56290E6CF10091CEB6 /* SF-Pro.ttf */; };
 		5F5F0E5C290E6F330091CEB6 /* Ansungtangmyun-ESG.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F5F0E5B290E6F330091CEB6 /* Ansungtangmyun-ESG.otf */; };
-		5F5F0E5E290E72BA0091CEB6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F0E5D290E72BA0091CEB6 /* File.swift */; };
 		5F5F0E65290E9FC00091CEB6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F0E64290E9FC00091CEB6 /* SearchView.swift */; };
 		5F5F0E67290EB70D0091CEB6 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F0E66290EB70D0091CEB6 /* SearchResultCell.swift */; };
 		5F6A48EA28FA764A004CD7C0 /* WeHereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6A48E928FA764A004CD7C0 /* WeHereApp.swift */; };
@@ -42,7 +41,6 @@
 		5F5F0E57290E6CFC0091CEB6 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		5F5F0E59290E6D2D0091CEB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5F5F0E5B290E6F330091CEB6 /* Ansungtangmyun-ESG.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ansungtangmyun-ESG.otf"; sourceTree = "<group>"; };
-		5F5F0E5D290E72BA0091CEB6 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		5F5F0E64290E9FC00091CEB6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		5F5F0E66290EB70D0091CEB6 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		5F6A48E628FA764A004CD7C0 /* WeHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +100,6 @@
 			children = (
 				5F3320742902AAC5006B989F /* ExtentionExample.swift */,
 				5F5F0E57290E6CFC0091CEB6 /* Font+.swift */,
-				5F5F0E5D290E72BA0091CEB6 /* File.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -291,7 +288,6 @@
 				5F3320782902AAE3006B989F /* ManagerExample.swift in Sources */,
 				5F3320752902AAC5006B989F /* ExtentionExample.swift in Sources */,
 				5F3320722902A9AE006B989F /* ExampleModel.swift in Sources */,
-				5F5F0E5E290E72BA0091CEB6 /* File.swift in Sources */,
 				5F5F0E67290EB70D0091CEB6 /* SearchResultCell.swift in Sources */,
 				5F33206F2902A992006B989F /* MainViewModel.swift in Sources */,
 			);
