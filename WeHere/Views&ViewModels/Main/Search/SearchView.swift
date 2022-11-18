@@ -10,16 +10,17 @@ import SwiftUI
 
 struct SearchView: View {
     @State var isSearch = false
+    @State var showTextFeild = false
     @Binding var searchKeyword: String
     @Binding var searchResults: [MKMapItem]
     var body: some View {
         ZStack {
-            customTextField
-            
             HStack {
                 Spacer()
                 magnifyingGlassButton
             }
+            mapSearchTextField
+                .zIndex(-1)
         }
             .frame(height: 44)
     }
@@ -33,12 +34,13 @@ private extension SearchView {
                     isSearch.toggle()
                     searchKeyword = ""
                 }
+                showTextFeild.toggle()
                 searchResults.removeAll()
             },
                label: {
             if isSearch {
                 Image(systemName: "xmark")
-                  .foregroundColor(.white)
+                  .foregroundColor(.black)
                   .frame(width: 44, height: 44)
                   .background(.white)
                   .clipShape(Circle())
@@ -52,7 +54,7 @@ private extension SearchView {
         })
     }
     
-    var customTextField: some View {
+    var mapSearchTextField: some View {
         ZStack {
             HStack {
                 Rectangle()
@@ -61,13 +63,13 @@ private extension SearchView {
                     .frame(width: isSearch ? UIScreen.main.bounds.width - 32 : .zero)
             }
             
-            if isSearch {
+            if showTextFeild {
                 TextField("검색어를 입력해주세요", text: $searchKeyword)
                     .padding(.horizontal, 20)
                     .onSubmit {
                         searchAction()
                     }
-                    .foregroundColor(.black)
+                    .frame(width: UIScreen.main.bounds.width - 32 - 44)
             }
         }
     }
@@ -85,7 +87,7 @@ private extension SearchView {
                                      longitudinalMeters: 1000)
 
         let search = MKLocalSearch(request: searchRequest)
-        search.start { (response, error) in
+        search.start { (response, _) in
             guard let response = response else { return }
             
             searchResults = response.mapItems
