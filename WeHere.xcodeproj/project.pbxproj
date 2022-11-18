@@ -97,14 +97,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		5F3320732902AAAA006B989F /* Extentions */ = {
+		5F3320732902AAAA006B989F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				5F3320742902AAC5006B989F /* ExtentionExample.swift */,
 				5F5F0E57290E6CFC0091CEB6 /* Font+.swift */,
 				5F5F0E5D290E72BA0091CEB6 /* File.swift */,
 			);
-			path = Extentions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5F3320762902AACE006B989F /* Managers */ = {
@@ -155,7 +155,7 @@
 				5F5F0E59290E6D2D0091CEB6 /* Info.plist */,
 				5F3320792902AAEC006B989F /* Fonts */,
 				5F3320762902AACE006B989F /* Managers */,
-				5F3320732902AAAA006B989F /* Extentions */,
+				5F3320732902AAAA006B989F /* Extensions */,
 				5F3320702902A997006B989F /* Models */,
 				5F33206A2902A963006B989F /* Views&ViewModels */,
 				5F7D4A8928FC642B00FFF083 /* GoogleService-Info.plist */,
