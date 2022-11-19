@@ -9,7 +9,7 @@ import MapKit
 import SwiftUI
 
 struct SearchView: View {
-    @State var isSearch = false
+    @Binding var isSearch: Bool
     @State var showTextFeild = false
     @Binding var searchKeyword: String
     @Binding var searchResults: [MKMapItem]
@@ -62,9 +62,10 @@ private extension SearchView {
                     .cornerRadius(20)
                     .frame(width: isSearch ? UIScreen.main.bounds.width - 32 : .zero)
             }
-            
             if showTextFeild {
-                TextField("검색어를 입력해주세요", text: $searchKeyword)
+                // TODO: TextField ZStack으로 커스텀하기 @Toby
+                TextField("검색어를세요", text: $searchKeyword)
+                    .foregroundColor(.black)
                     .padding(.horizontal, 20)
                     .onSubmit {
                         searchAction()
@@ -88,15 +89,18 @@ private extension SearchView {
 
         let search = MKLocalSearch(request: searchRequest)
         search.start { (response, _) in
-            guard let response = response else { return }
-            
-            searchResults = response.mapItems
+            if let response = response {
+                searchResults = response.mapItems
+            } else {
+                searchResults = [
+                    .init(placemark: MKPlacemark(coordinate: .init()))]
+            }
         }
     }
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView(searchKeyword: .constant(""), searchResults: .constant([]))
+        SearchView(isSearch: .constant(false), searchKeyword: .constant(""), searchResults: .constant([]))
     }
 }
