@@ -6,10 +6,32 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MainView: View {
+    @State var searcrhKeyword = ""
+    @State var searchResults = [MKMapItem]()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle()
+                .foregroundColor(.gray)
+            
+            VStack {
+                SearchView(searchKeyword: $searcrhKeyword, searchResults: $searchResults)
+                    .padding(.top, 22)
+                    .padding(.horizontal, 16)
+                
+                ScrollView(showsIndicators: false) {
+                    ForEach(0..<searchResults.count, id: \.self) { index in
+                        SearchResultCell(item: $searchResults[index])
+                            .padding(.horizontal, 16)
+                    }
+                }
+                .padding(.top, 22)
+                
+                Spacer()
+            }
+        }
     }
 }
 
