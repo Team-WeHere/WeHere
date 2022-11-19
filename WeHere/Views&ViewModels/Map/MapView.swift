@@ -9,22 +9,32 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @EnvironmentObject private var viewModel: MapViewModel
+    @StateObject private var viewModel = MapViewModel()
     @State private var showFabAnimation = false
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $viewModel.mapRegion,
-                showsUserLocation: true, annotationItems: viewModel.places,
-                annotationContent: { location in
-                MapAnnotation(coordinate: location.coordinates) {
-                    PinView(category: location.category)
-                        .scaleEffect(viewModel.selectedPlace == location ? 1 : 0.75)
-                        .onTapGesture {
-                            viewModel.updateSelectedPlace(place: location)
+            Map(
+                coordinateRegion: Binding(
+                    get: { self.viewModel.mapRegion },
+                    set: { newValue in
+                        DispatchQueue.main.async {
+                            self.viewModel.mapRegion = newValue
                         }
+                    }
+                ),
+                showsUserLocation: true,
+                annotationItems: viewModel.places,
+                annotationContent: { location in
+                    MapAnnotation(coordinate: location.coordinates) {
+                        PinView(category: location.category)
+                            .scaleEffect(viewModel.selectedPlace == location ? 1 : 0.75)
+                            .onTapGesture {
+                                    viewModel.updateSelectedPlace(place: location)
+                            }
+                    }
                 }
-            })
+            )
             .ignoresSafeArea()
             .onAppear {
                 viewModel.checkIfLocationServicesIsEnabled()
@@ -144,6 +154,5 @@ extension MapView {
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView()
-            .environmentObject(MapViewModel())
     }
 }
