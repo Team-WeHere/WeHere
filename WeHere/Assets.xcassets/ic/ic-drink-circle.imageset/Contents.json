@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic-drink-circle.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
