@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @EnvironmentObject private var viewModel: MapViewModel
+    @StateObject private var viewModel = MapViewModel()
     @State private var showFabAnimation = false
     
     var body: some View {
@@ -144,6 +144,5 @@ extension MapView {
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView()
-            .environmentObject(MapViewModel())
     }
 }
