@@ -14,17 +14,27 @@ struct MapView: View {
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $viewModel.mapRegion,
-                showsUserLocation: true, annotationItems: viewModel.places,
-                annotationContent: { location in
-                MapAnnotation(coordinate: location.coordinates) {
-                    PinView(category: location.category)
-                        .scaleEffect(viewModel.selectedPlace == location ? 1 : 0.75)
-                        .onTapGesture {
-                            viewModel.updateSelectedPlace(place: location)
+            Map(
+                coordinateRegion: Binding(
+                    get: { self.viewModel.mapRegion },
+                    set: { newValue in
+                        DispatchQueue.main.async {
+                            self.viewModel.mapRegion = newValue
                         }
+                    }
+                ),
+                showsUserLocation: true,
+                annotationItems: viewModel.places,
+                annotationContent: { location in
+                    MapAnnotation(coordinate: location.coordinates) {
+                        PinView(category: location.category)
+                            .scaleEffect(viewModel.selectedPlace == location ? 1 : 0.75)
+                            .onTapGesture {
+                                    viewModel.updateSelectedPlace(place: location)
+                            }
+                    }
                 }
-            })
+            )
             .ignoresSafeArea()
             .onAppear {
                 viewModel.checkIfLocationServicesIsEnabled()
