@@ -10,6 +10,11 @@ import SwiftUI
 struct BottomModal: View {
     @State private var currentIndex = 0
     let place = Place.mockData[1]
+    @Binding var likes: Int
+
+    func likeAction () {
+        likes += 7
+    }
     
     var body: some View {
         TabView(selection: $currentIndex) {
@@ -76,7 +81,6 @@ extension BottomModal {
                  : "폼폼님께 이 장소를 콕 하세요!")
                 .font(Font.theme.body2)
                 .foregroundColor(Color.gray02)
-
         }
     }
     private var placeDetailView: some View {
@@ -108,8 +112,10 @@ extension BottomModal {
     }
 }
 
+/*
 struct BottomModal_Previews: PreviewProvider {
     static var previews: some View {
         BottomModal()
     }
 }
+*/
