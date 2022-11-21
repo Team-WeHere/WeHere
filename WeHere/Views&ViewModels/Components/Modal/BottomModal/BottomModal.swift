@@ -9,11 +9,13 @@ import SwiftUI
 
 struct BottomModal: View {
     @State private var currentIndex = 0
-    let place = Place.mockData[1]
     @Binding var likes: Int
+    @Binding var isPokeButtonDisabled: Bool
+    let place = Place.mockData[1]
 
-    func likeAction () {
+    func likeAction() {
         likes += 7
+        isPokeButtonDisabled = true
     }
     
     var body: some View {
@@ -53,10 +55,46 @@ struct BottomModal: View {
 
 extension BottomModal {
     private var pokeView: some View {
-        VStack {
-            HStack {
-                Text(place.name)
-                    .font(Font.theme.title1)
+        ZStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(place.name)
+                        .font(Font.theme.title1)
+                    Spacer()
+                }
+                HStack {
+                    Image(place.category.name)
+                        .resizable()
+                        .frame(width: 20, height: 24)
+                    Text(place.address)
+                        .font(Font.theme.body2)
+                        .foregroundColor(Color.gray02)
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                    VStack {
+                        Spacer()
+                        Button {
+                            HapticManager.shared.notification(type: .success)
+                            likeAction()
+                        } label: {
+                            MultipleStrokeHeartView(width: 112,
+                                                    height: 105,
+                                                    isPoked: place.isPoked,
+                                                    image: "profile-girl")
+                        }
+                        .padding(.bottom, 25)
+                        .disabled(isPokeButtonDisabled)
+                        Text(place.isPoked
+                             ? "푸린님이 콕 한 장소에요!"
+                             : "폼폼님께 이 장소를 콕 하세요!")
+                            .font(Font.theme.body2)
+                            .foregroundColor(Color.gray02)
+                        Spacer()
+                    }
+                    Spacer()
+                }
                 Spacer()
             }
             HStack {

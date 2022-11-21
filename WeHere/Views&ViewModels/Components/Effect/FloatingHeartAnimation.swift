@@ -11,7 +11,7 @@ struct FloatingHeartAnimation: GeometryEffect {
     var time: Double
     var speed = Double.random(in: 100 ... 500)
     var xDirection = Double.random(in: -0.75 ... 0.75)
-    var yDirection = Double.random(in: -0.5 ... 0)
+    var yDirection = Double.random(in: -0.75 ...  0)
     
     var animatableData: Double {
         get { time }
@@ -25,16 +25,16 @@ struct FloatingHeartAnimation: GeometryEffect {
     }
 }
 
-struct LikeTapModifier: ViewModifier {
+struct PokeTapModifier: ViewModifier {
     @State var time = 0.0
-    let duration = 3.0
+    let duration = 2.5
     
     func body(content: Content) -> some View {
         ZStack {
             content
                 .foregroundColor(.red)
                 .modifier(FloatingHeartAnimation(time: time))
-                .opacity(time == 3.0 ? 0 : 1)
+                .opacity(time == 2.5 ? 0 : 1)
         }
         .onAppear {
             withAnimation(.easeOut(duration: duration)) {
