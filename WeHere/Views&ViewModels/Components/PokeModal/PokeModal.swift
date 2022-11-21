@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct PokeModal: View {
-    var shown = true
-    
     @State private var selected: Category?
+    @Binding var isShown: Bool
     
     var body: some View {
         VStack {
@@ -47,7 +46,7 @@ struct PokeModal: View {
                 .disabled(selected == nil)
                 
                 Button {
-                  // TODO: Close
+                    isShown.toggle()
                 } label: {
                     Text("닫기")
                         .foregroundColor(.white)
@@ -59,14 +58,16 @@ struct PokeModal: View {
             }
         }
         .frame(width: UIScreen.main.bounds.width - 32, height: 286)
-        .background(Color.blue01)
+        .background(Color.white)
         .cornerRadius(20)
         .clipped()
     }
 }
 
+/*
 struct PokeModal_Previews: PreviewProvider {
     static var previews: some View {
         PokeModal()
     }
 }
+*/

@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isPokeModalShown = false
     var body: some View {
         ZStack {
-            Color.orange
-            
-            PokeModal()
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        isPokeModalShown.toggle()
+                    } label: {
+                        Text("모달을 띄워보세요")
+                    }
+                    Spacer()
+                }
+                Spacer()
+            }
+            .background(isPokeModalShown ?
+                        Color.black.opacity(0.5)
+                        : Color.clear)
+ 
+            if isPokeModalShown {
+                PokeModal(isShown: $isPokeModalShown)
+            }
         }
     }
 }
