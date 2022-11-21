@@ -9,14 +9,7 @@ import SwiftUI
 
 struct BottomModal: View {
     @State private var currentIndex = 0
-    @Binding var likes: Int
-    @Binding var isPokeButtonDisabled: Bool
     let place = Place.mockData[1]
-
-    func likeAction() {
-        likes += 7
-        isPokeButtonDisabled = true
-    }
     
     var body: some View {
         TabView(selection: $currentIndex) {
@@ -77,7 +70,6 @@ extension BottomModal {
                         Spacer()
                         Button {
                             HapticManager.shared.notification(type: .success)
-                            likeAction()
                         } label: {
                             MultipleStrokeHeartView(width: 112,
                                                     height: 105,
@@ -85,7 +77,6 @@ extension BottomModal {
                                                     image: "profile-girl")
                         }
                         .padding(.bottom, 25)
-                        .disabled(isPokeButtonDisabled)
                         Text(place.isPoked
                              ? "푸린님이 콕 한 장소에요!"
                              : "폼폼님께 이 장소를 콕 하세요!")
