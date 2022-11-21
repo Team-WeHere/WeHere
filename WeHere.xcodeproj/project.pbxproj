@@ -37,6 +37,7 @@
 		A7610A6E292B99970030A79D /* BottomModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A6D292B99970030A79D /* BottomModal.swift */; };
 		A7610A70292B9A140030A79D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A6F292B9A140030A79D /* TestView.swift */; };
 		A7610A73292BAC790030A79D /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A72292BAC790030A79D /* IndexView.swift */; };
+		A7610A75292BB3A90030A79D /* MultipleStrokeHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		A7610A6D292B99970030A79D /* BottomModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomModal.swift; sourceTree = "<group>"; };
 		A7610A6F292B9A140030A79D /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		A7610A72292BAC790030A79D /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
+		A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleStrokeHeartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			children = (
 				A75B09C32916924500869081 /* HeartShape.swift */,
 				A75B09C52916925000869081 /* HeartView.swift */,
+				A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */,
 			);
 			path = HeartView;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				A7610A70292B9A140030A79D /* TestView.swift in Sources */,
 				A716C0A7291BD0E500B0614F /* ScalableButtonStyle.swift in Sources */,
 				5F3320782902AAE3006B989F /* ManagerExample.swift in Sources */,
+				A7610A75292BB3A90030A79D /* MultipleStrokeHeartView.swift in Sources */,
 				5F3320752902AAC5006B989F /* ExtentionExample.swift in Sources */,
 				5F5F0E67290EB70D0091CEB6 /* SearchResultCell.swift in Sources */,
 				5F33206F2902A992006B989F /* MainViewModel.swift in Sources */,

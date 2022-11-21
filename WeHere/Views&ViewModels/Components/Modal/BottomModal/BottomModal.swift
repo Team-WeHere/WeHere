@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BottomModal: View {
     @State private var currentIndex = 0
-    let place = Place.mockData[2]
+    let place = Place.mockData[0]
     
     var body: some View {
         TabView(selection: $currentIndex) {
@@ -70,7 +70,7 @@ extension BottomModal {
                     Button {
                         HapticManager.shared.notification(type: .success)
                     } label: {
-                        HeartView(width: 112, height: 105, hasStroke: false, image: "profile-girl")
+                        MultipleStrokeHeartView(width: 112, height: 105, isPoked: place.isPoked, image: "profile-girl")
                     }
                     .padding(.bottom, 25)
                     Text(place.isPoked
