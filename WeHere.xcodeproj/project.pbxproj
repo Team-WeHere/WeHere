@@ -35,7 +35,6 @@
 		A75B09C62916925000869081 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09C52916925000869081 /* HeartView.swift */; };
 		A75B09C82916B5D600869081 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09C72916B5D600869081 /* HapticManager.swift */; };
 		A7610A6E292B99970030A79D /* BottomModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A6D292B99970030A79D /* BottomModal.swift */; };
-		A7610A70292B9A140030A79D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A6F292B9A140030A79D /* TestView.swift */; };
 		A7610A73292BAC790030A79D /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A72292BAC790030A79D /* IndexView.swift */; };
 		A7610A75292BB3A90030A79D /* MultipleStrokeHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */; };
 /* End PBXBuildFile section */
@@ -71,7 +70,6 @@
 		A75B09C52916925000869081 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
 		A75B09C72916B5D600869081 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		A7610A6D292B99970030A79D /* BottomModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomModal.swift; sourceTree = "<group>"; };
-		A7610A6F292B9A140030A79D /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		A7610A72292BAC790030A79D /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
 		A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleStrokeHeartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				A7610A71292BAC640030A79D /* BottomModal */,
-				A7610A6F292B9A140030A79D /* TestView.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -374,7 +371,6 @@
 				A75B09A929164E7800869081 /* Place.swift in Sources */,
 				5F6A48EA28FA764A004CD7C0 /* WeHereApp.swift in Sources */,
 				A75B09BD2916710B00869081 /* PinView.swift in Sources */,
-				A7610A70292B9A140030A79D /* TestView.swift in Sources */,
 				A716C0A7291BD0E500B0614F /* ScalableButtonStyle.swift in Sources */,
 				5F3320782902AAE3006B989F /* ManagerExample.swift in Sources */,
 				A7610A75292BB3A90030A79D /* MultipleStrokeHeartView.swift in Sources */,

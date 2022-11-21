@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BottomModal: View {
     @State private var currentIndex = 0
-    let place = Place.mockData[0]
+    let place = Place.mockData[1]
     
     var body: some View {
         TabView(selection: $currentIndex) {
