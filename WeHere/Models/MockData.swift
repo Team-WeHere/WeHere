@@ -26,17 +26,20 @@ extension Place {
               category: Category.mockData[2],
               address: "경북 포항시 남구 효자동 223-2",
               latitude: 36.009244880301694,
-              longitude: 129.333276892455),
-        Place(name: "담박집",
+              longitude: 129.333276892455,
+              isPoked: true),
+        Place(name: "담박집2",
               category: Category.mockData[2],
               address: "경북 포항시 남구 효자동 223-3",
               latitude: 36.00917954974529,
-              longitude: 129.33311527944772),
+              longitude: 129.33311527944772,
+              isPoked: false),
         Place(name: "복숭A",
               category: Category.mockData[1],
               address: "경북 포항시 남구 효자동 305-5",
               latitude: 36.00871768988776,
-              longitude: 129.3315225469234)
+              longitude: 129.3315225469234,
+              isPoked: true)
     ]
 
     static let empty: [Place] = []

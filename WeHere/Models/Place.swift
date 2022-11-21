@@ -18,6 +18,7 @@ struct Place: Identifiable, Equatable {
     var coordinates: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
+    let isPoked: Bool
     
     static func == (lhs: Place, rhs: Place) -> Bool {
         lhs.id == rhs.id
