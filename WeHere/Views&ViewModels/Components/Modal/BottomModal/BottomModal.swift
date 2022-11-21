@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BottomModal: View {
     @State private var currentIndex = 0
-    private let colors: [Color] = [.red, .blue, .green, .yellow]
+    let place = Place.mockData[2]
     
     var body: some View {
         TabView(selection: $currentIndex) {
@@ -50,15 +50,15 @@ extension BottomModal {
     private var pokeView: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("담박집")
+                Text(place.name)
                     .font(Font.theme.title1)
                 Spacer()
             }
             HStack {
-                Image("cafe")
+                Image(place.category.name)
                     .resizable()
                     .frame(width: 20, height: 24)
-                Text("경상북도 포항시 지곡로80")
+                Text(place.address)
                     .font(Font.theme.body2)
                     .foregroundColor(Color.gray02)
                 Spacer()
@@ -70,10 +70,12 @@ extension BottomModal {
                     Button {
                         HapticManager.shared.notification(type: .success)
                     } label: {
-                        HeartView(width: 112, height: 105, hasStroke: false)
+                        HeartView(width: 112, height: 105, hasStroke: false, image: "profile-girl")
                     }
                     .padding(.bottom, 25)
-                    Text("폼폼님께 이 장소를 콕 하세요!")
+                    Text(place.isPoked
+                         ? "푸린님이 콕 한 장소에요!"
+                         : "폼폼님께 이 장소를 콕 하세요!")
                         .font(Font.theme.body2)
                         .foregroundColor(Color.gray02)
                     Spacer()
@@ -82,20 +84,19 @@ extension BottomModal {
             }
             Spacer()
         }
-        
     }
     private var placeDetailView: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("담박집")
+                Text(place.name)
                     .font(Font.theme.title1)
                 Spacer()
             }
             HStack {
-                Image("cafe")
+                Image(place.category.name)
                     .resizable()
                     .frame(width: 20, height: 24)
-                Text("경상북도 포항시 지곡로80")
+                Text(place.address)
                     .font(Font.theme.body2)
                     .foregroundColor(Color.gray02)
                 Spacer()
