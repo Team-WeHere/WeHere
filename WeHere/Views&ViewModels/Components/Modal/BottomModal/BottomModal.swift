@@ -19,9 +19,11 @@ struct BottomModal: View {
                     switch index {
                     case 0:
                         pokeView
+                            .padding(EdgeInsets(top: 28, leading: 28, bottom: 28, trailing: 28))
                         
                     case 1:
                         placeDetailView
+                            .padding(EdgeInsets(top: 28, leading: 28, bottom: 28, trailing: 28))
                         
                     default:
                         EmptyView()
@@ -32,9 +34,15 @@ struct BottomModal: View {
             }
             .padding(.all, 10)
         }
-        .tabViewStyle(.page)
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width*0.88)
+        .overlay(
+            VStack {
+                Spacer()
+                IndexView(currentIndex: currentIndex)
+                    .padding(.bottom, 28)
+            }
+        )
     }
 }
 
@@ -74,7 +82,7 @@ extension BottomModal {
             }
             Spacer()
         }
-        .padding(EdgeInsets(top: 28, leading: 28, bottom: 0, trailing: 28))
+        
     }
     private var placeDetailView: some View {
         VStack(alignment: .leading) {
@@ -110,7 +118,6 @@ extension BottomModal {
             }
             Spacer()
         }
-        .padding(EdgeInsets(top: 28, leading: 28, bottom: 0, trailing: 28))
     }
 }
 
