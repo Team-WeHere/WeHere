@@ -9,12 +9,20 @@ import SwiftUI
 
 extension Category {
     static let mockData: [Category] = [
-        Category(name: "cafe", icon: "cup.and.saucer.fill", color: Color.pink02),
-        Category(name: "drink", icon: "wineglass.fill", color: Color.yellow02),
-        Category(name: "food", icon: "fork.knife", color: Color.green02),
-        Category(name: "culture", icon: "ticket.fill", color: Color.blue02),
-        Category(name: "etc", icon: "guitars.fill", color: Color.purple02),
-        Category(name: "default", icon: "heart.fill", color: Color.pink02)
+        Category(id: 0, name: "cafe", icon: "cup.and.saucer.fill", color: Color.pink02),
+        Category(id: 1, name: "drink", icon: "wineglass.fill", color: Color.yellow02),
+        Category(id: 2, name: "food", icon: "fork.knife", color: Color.green02),
+        Category(id: 3, name: "culture", icon: "ticket.fill", color: Color.blue02),
+        Category(id: 4, name: "etc", icon: "guitars.fill", color: Color.purple02),
+        Category(id: 5, name: "default", icon: "heart.fill", color: Color.pink02)
+    ]
+    
+    static let categories: [Category] = [
+        Category(id: 0, name: "cafe", icon: "cup.and.saucer.fill", color: Color.pink02),
+        Category(id: 1, name: "drink", icon: "wineglass.fill", color: Color.yellow02),
+        Category(id: 2, name: "food", icon: "fork.knife", color: Color.green02),
+        Category(id: 3, name: "culture", icon: "ticket.fill", color: Color.blue02),
+        Category(id: 4, name: "etc", icon: "guitars.fill", color: Color.purple02)
     ]
     
     static let empty: [Category] = []
