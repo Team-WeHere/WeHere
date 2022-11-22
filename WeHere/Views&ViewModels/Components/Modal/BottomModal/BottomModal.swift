@@ -13,7 +13,7 @@ struct BottomModal: View {
     
     var body: some View {
         TabView(selection: $currentIndex) {
-            ForEach(0..<2) { index in
+            ForEach(0..<1) { index in
                 ZStack {
                     Color.white
                     switch index {
@@ -36,13 +36,13 @@ struct BottomModal: View {
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width*0.88)
-        .overlay(
-            VStack {
-                Spacer()
-                IndexView(currentIndex: currentIndex)
-                    .padding(.bottom, 28)
-            }
-        )
+//        .overlay(
+//            VStack {
+//                Spacer()
+//                IndexView(currentIndex: currentIndex)
+//                    .padding(.bottom, 28)
+//            }
+//        )
     }
 }
 
