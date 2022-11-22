@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PokeModal: View {
     @State private var selected: Category?
+    @State private var isJumping = false
     @Binding var isShown: Bool
     
     var body: some View {
@@ -20,6 +21,10 @@ struct PokeModal: View {
                 ForEach(Category.categories, id: \.self) { category in
                     Button {
                         selected = category
+                        isJumping.toggle()
+                        Timer.scheduledTimer(withTimeInterval: 0.25, repeats: false) { _ in
+                            isJumping.toggle()
+                        }
                     } label: {
                         Image(selected == category
                               ? category.name
@@ -28,6 +33,8 @@ struct PokeModal: View {
                             .resizable()
                             .frame(width: 45, height: 54)
                     }
+                    .offset(y: (selected == category) && isJumping ? 0 : 10)
+                    .animation(.spring(response: 0.1, dampingFraction: 0.85, blendDuration: 0.0), value: isJumping)
                 }
             }
             .padding(.vertical, 40)
