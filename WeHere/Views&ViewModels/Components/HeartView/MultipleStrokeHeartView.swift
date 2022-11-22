@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct MultipleStrokeHeartView: View {
-    var width: CGFloat = 100
-    var height: CGFloat = 100
-    var isPoked = false
-    var image = "sample-profile"
+    private var width: CGFloat = 100
+    private var height: CGFloat = 100
+    private var isPoked = false
+    private var image = "sample-profile"
+    
+    init(width: CGFloat, height: CGFloat, isPoked: Bool, image: String) {
+        self.width = width
+        self.height = height
+        self.isPoked = isPoked
+        self.image = image
+    }
     
     var body: some View {
         ZStack {
@@ -56,8 +63,10 @@ struct MultipleStrokeHeartView: View {
     }
 }
 
+/*
 struct MultipleStrokeHeartView_Previews: PreviewProvider {
     static var previews: some View {
         MultipleStrokeHeartView()
     }
 }
+*/
