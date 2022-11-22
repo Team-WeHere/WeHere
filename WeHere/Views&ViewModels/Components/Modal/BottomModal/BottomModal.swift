@@ -19,11 +19,11 @@ struct BottomModal: View {
                     switch index {
                     case 0:
                         pokeView
-                            .padding(EdgeInsets(top: 28, leading: 28, bottom: 28, trailing: 28))
+                            .padding(28)
                         
                     case 1:
                         placeDetailView
-                            .padding(EdgeInsets(top: 28, leading: 28, bottom: 28, trailing: 28))
+                            .padding(28)
                         
                     default:
                         EmptyView()
@@ -32,7 +32,7 @@ struct BottomModal: View {
                 .clipShape(RoundedRectangle(cornerRadius: 30.0,
                                             style: .continuous))
             }
-            .padding(.all, 10)
+            .padding(10)
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width*0.88)
