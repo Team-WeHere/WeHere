@@ -34,6 +34,9 @@
 		A75B09C42916924500869081 /* HeartShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09C32916924500869081 /* HeartShape.swift */; };
 		A75B09C62916925000869081 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09C52916925000869081 /* HeartView.swift */; };
 		A75B09C82916B5D600869081 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B09C72916B5D600869081 /* HapticManager.swift */; };
+		A7610A6E292B99970030A79D /* BottomModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A6D292B99970030A79D /* BottomModal.swift */; };
+		A7610A73292BAC790030A79D /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A72292BAC790030A79D /* IndexView.swift */; };
+		A7610A75292BB3A90030A79D /* MultipleStrokeHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		A75B09C32916924500869081 /* HeartShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartShape.swift; sourceTree = "<group>"; };
 		A75B09C52916925000869081 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
 		A75B09C72916B5D600869081 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		A7610A6D292B99970030A79D /* BottomModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomModal.swift; sourceTree = "<group>"; };
+		A7610A72292BAC790030A79D /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
+		A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleStrokeHeartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,7 @@
 		A75B09B82916655D00869081 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A7610A6A292B99840030A79D /* Modal */,
 				A716C0A5291BD0D000B0614F /* Button */,
 				A75B09C22916923200869081 /* HeartView */,
 				A75B09B92916656500869081 /* Pin */,
@@ -230,8 +237,26 @@
 			children = (
 				A75B09C32916924500869081 /* HeartShape.swift */,
 				A75B09C52916925000869081 /* HeartView.swift */,
+				A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */,
 			);
 			path = HeartView;
+			sourceTree = "<group>";
+		};
+		A7610A6A292B99840030A79D /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				A7610A71292BAC640030A79D /* BottomModal */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		A7610A71292BAC640030A79D /* BottomModal */ = {
+			isa = PBXGroup;
+			children = (
+				A7610A6D292B99970030A79D /* BottomModal.swift */,
+				A7610A72292BAC790030A79D /* IndexView.swift */,
+			);
+			path = BottomModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,9 +373,12 @@
 				A75B09BD2916710B00869081 /* PinView.swift in Sources */,
 				A716C0A7291BD0E500B0614F /* ScalableButtonStyle.swift in Sources */,
 				5F3320782902AAE3006B989F /* ManagerExample.swift in Sources */,
+				A7610A75292BB3A90030A79D /* MultipleStrokeHeartView.swift in Sources */,
 				5F3320752902AAC5006B989F /* ExtentionExample.swift in Sources */,
 				5F5F0E67290EB70D0091CEB6 /* SearchResultCell.swift in Sources */,
 				5F33206F2902A992006B989F /* MainViewModel.swift in Sources */,
+				A7610A73292BAC790030A79D /* IndexView.swift in Sources */,
+				A7610A6E292B99970030A79D /* BottomModal.swift in Sources */,
 				A75B09A729164D7E00869081 /* MapViewModel.swift in Sources */,
 				A75B09AF291653D700869081 /* ExampleModel.swift in Sources */,
 				5FF206C829293D8F00B8B927 /* Color+.swift in Sources */,
