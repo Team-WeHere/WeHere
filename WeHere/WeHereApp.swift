@@ -8,9 +8,12 @@
 import SwiftUI
 import KakaoSDKCommon
 import KakaoSDKAuth
+import FirebaseCore
 
 @main
 struct WeHereApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     init() {
         // Kakao SDK 초기화
         KakaoSDK.initSDK(appKey: "네이티브 앱 키")
