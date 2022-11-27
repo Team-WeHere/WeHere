@@ -37,6 +37,8 @@
 		A7610A6E292B99970030A79D /* BottomModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A6D292B99970030A79D /* BottomModal.swift */; };
 		A7610A73292BAC790030A79D /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A72292BAC790030A79D /* IndexView.swift */; };
 		A7610A75292BB3A90030A79D /* MultipleStrokeHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */; };
+		A7610A78292BBA770030A79D /* FloatingHeartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A77292BBA770030A79D /* FloatingHeartAnimation.swift */; };
+		A7610A7A292BCDAA0030A79D /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A79292BCDAA0030A79D /* PulseAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		A7610A6D292B99970030A79D /* BottomModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomModal.swift; sourceTree = "<group>"; };
 		A7610A72292BAC790030A79D /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
 		A7610A74292BB3A90030A79D /* MultipleStrokeHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleStrokeHeartView.swift; sourceTree = "<group>"; };
+		A7610A77292BBA770030A79D /* FloatingHeartAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingHeartAnimation.swift; sourceTree = "<group>"; };
+		A7610A79292BCDAA0030A79D /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 		A75B09B82916655D00869081 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A7610A76292BBA690030A79D /* Effect */,
 				A7610A6A292B99840030A79D /* Modal */,
 				A716C0A5291BD0D000B0614F /* Button */,
 				A75B09C22916923200869081 /* HeartView */,
@@ -257,6 +262,15 @@
 				A7610A72292BAC790030A79D /* IndexView.swift */,
 			);
 			path = BottomModal;
+			sourceTree = "<group>";
+		};
+		A7610A76292BBA690030A79D /* Effect */ = {
+			isa = PBXGroup;
+			children = (
+				A7610A77292BBA770030A79D /* FloatingHeartAnimation.swift */,
+				A7610A79292BCDAA0030A79D /* PulseAnimation.swift */,
+			);
+			path = Effect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,11 +374,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5F0E65290E9FC00091CEB6 /* SearchView.swift in Sources */,
+				A7610A78292BBA770030A79D /* FloatingHeartAnimation.swift in Sources */,
 				5F5F0E58290E6CFC0091CEB6 /* Font+.swift in Sources */,
 				A75B09C42916924500869081 /* HeartShape.swift in Sources */,
 				5F6A48EC28FA764A004CD7C0 /* ContentView.swift in Sources */,
 				A75B09B329165B0A00869081 /* MockData.swift in Sources */,
 				A75B09C82916B5D600869081 /* HapticManager.swift in Sources */,
+				A7610A7A292BCDAA0030A79D /* PulseAnimation.swift in Sources */,
 				A75B09A329164D6D00869081 /* MapView.swift in Sources */,
 				5F33206D2902A984006B989F /* MainView.swift in Sources */,
 				A75B09C62916925000869081 /* HeartView.swift in Sources */,

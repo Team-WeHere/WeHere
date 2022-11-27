@@ -48,35 +48,38 @@ struct BottomModal: View {
 
 extension BottomModal {
     private var pokeView: some View {
-        VStack {
-            HStack {
-                Text(place.name)
-                    .font(Font.theme.title1)
-                Spacer()
-            }
-            HStack {
-                Image(place.category.name)
-                    .resizable()
-                    .frame(width: 20, height: 24)
-                Text(place.address)
+        ZStack {
+            VStack {
+                HStack {
+                    Text(place.name)
+                        .font(Font.theme.title1)
+                        .foregroundColor(Color.black)
+                    Spacer()
+                }
+
+                HStack {
+                    Image(place.category.name)
+                        .resizable()
+                        .frame(width: 20, height: 24)
+                    Text(place.address)
+                        .font(Font.theme.body2)
+                        .foregroundColor(Color.gray02)
+                    Spacer()
+                }
+                
+                Button {
+                    HapticManager.shared.notification(type: .success)
+                } label: {
+                    MultipleStrokeHeartView(width: 112, height: 105, isPoked: place.isPoked, image: "profile-girl")
+                }
+                .padding(.bottom, 25)
+                
+                Text(place.isPoked
+                     ? "푸린님이 콕 한 장소에요!"
+                     : "폼폼님께 이 장소를 콕 하세요!")
                     .font(Font.theme.body2)
                     .foregroundColor(Color.gray02)
-                Spacer()
             }
-            
-            Button {
-                HapticManager.shared.notification(type: .success)
-            } label: {
-                MultipleStrokeHeartView(width: 112, height: 105, isPoked: place.isPoked, image: "profile-girl")
-            }
-            .padding(.bottom, 25)
-            
-            Text(place.isPoked
-                 ? "푸린님이 콕 한 장소에요!"
-                 : "폼폼님께 이 장소를 콕 하세요!")
-                .font(Font.theme.body2)
-                .foregroundColor(Color.gray02)
-
         }
     }
     private var placeDetailView: some View {
@@ -84,6 +87,7 @@ extension BottomModal {
             HStack {
                 Text(place.name)
                     .font(Font.theme.title1)
+                    .foregroundColor(Color.black)
                 Spacer()
             }
             HStack {
@@ -108,8 +112,10 @@ extension BottomModal {
     }
 }
 
+/*
 struct BottomModal_Previews: PreviewProvider {
     static var previews: some View {
         BottomModal()
     }
 }
+*/
