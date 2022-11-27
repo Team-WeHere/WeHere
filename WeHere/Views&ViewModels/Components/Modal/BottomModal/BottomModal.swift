@@ -53,6 +53,7 @@ extension BottomModal {
                 HStack {
                     Text(place.name)
                         .font(Font.theme.title1)
+                        .foregroundColor(Color.black)
                     Spacer()
                 }
                 HStack {
@@ -117,6 +118,7 @@ extension BottomModal {
             HStack {
                 Text(place.name)
                     .font(Font.theme.title1)
+                    .foregroundColor(Color.black)
                 Spacer()
             }
             HStack {

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct FloatingHeartAnimation: GeometryEffect {
     var time: Double
-    var speed = Double.random(in: 100 ... 500)
-    var xDirection = Double.random(in: -0.75 ... 0.75)
-    var yDirection = Double.random(in: -0.75 ...  0)
+    var speed = Double.random(in: 100...500)
+    var xDirection = Double.random(in: -0.3...0.3)
+    var yDirection = Double.random(in: -0.75...0)
     
     var animatableData: Double {
         get { time }

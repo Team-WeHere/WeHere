@@ -24,7 +24,7 @@ struct ContentView: View {
             
             VStack {
                 Button {
-                    floatHeartAction() //
+                    floatHeartAction()
                 } label: {
                     Text("애니메이션!")
                         .foregroundColor(Color.white)
