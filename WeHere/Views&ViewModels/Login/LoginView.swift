@@ -78,12 +78,16 @@ private extension LoginView {
 private extension LoginView {
     var loginButtons: some View {
         VStack(spacing: 14) {
-            Button(action: { SNSLoginManager.shared.signInWithKakao() }) {
+            Button(action: { KakaoLoginManager.shared.signInWithKakao() }) {
                 Image("SignInWithKakao")
             }
-            Button(action: { print("LoginApple") }) {
+            Button(action: {
+                FirebaseManager.shared.touchUpAppleButton {
+                    print("DONE")
+                }
+            }, label: {
                 Image("SignInWithApple")
-            }
+            })
         }
     }
 }
