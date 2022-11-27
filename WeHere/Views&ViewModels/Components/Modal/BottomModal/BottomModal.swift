@@ -49,13 +49,14 @@ struct BottomModal: View {
 extension BottomModal {
     private var pokeView: some View {
         ZStack {
-            VStack(alignment: .leading) {
+            VStack {
                 HStack {
                     Text(place.name)
                         .font(Font.theme.title1)
                         .foregroundColor(Color.black)
                     Spacer()
                 }
+
                 HStack {
                     Image(place.category.name)
                         .resizable()
@@ -65,52 +66,20 @@ extension BottomModal {
                         .foregroundColor(Color.gray02)
                     Spacer()
                 }
-                HStack {
-                    Spacer()
-                    VStack {
-                        Spacer()
-                        Button {
-                            HapticManager.shared.notification(type: .success)
-                        } label: {
-                            MultipleStrokeHeartView(width: 112,
-                                                    height: 105,
-                                                    isPoked: place.isPoked,
-                                                    image: "profile-girl")
-                        }
-                        .padding(.bottom, 25)
-                        Text(place.isPoked
-                             ? "푸린님이 콕 한 장소에요!"
-                             : "폼폼님께 이 장소를 콕 하세요!")
-                            .font(Font.theme.body2)
-                            .foregroundColor(Color.gray02)
-                        Spacer()
-                    }
-                    Spacer()
+                
+                Button {
+                    HapticManager.shared.notification(type: .success)
+                } label: {
+                    MultipleStrokeHeartView(width: 112, height: 105, isPoked: place.isPoked, image: "profile-girl")
                 }
-                Spacer()
-            }
-            HStack {
-                Image(place.category.name)
-                    .resizable()
-                    .frame(width: 20, height: 24)
-                Text(place.address)
+                .padding(.bottom, 25)
+                
+                Text(place.isPoked
+                     ? "푸린님이 콕 한 장소에요!"
+                     : "폼폼님께 이 장소를 콕 하세요!")
                     .font(Font.theme.body2)
                     .foregroundColor(Color.gray02)
-                Spacer()
             }
-            
-            Button {
-                HapticManager.shared.notification(type: .success)
-            } label: {
-                MultipleStrokeHeartView(width: 112, height: 105, isPoked: place.isPoked, image: "profile-girl")
-            }
-            .padding(.bottom, 25)
-            
-            Text(place.isPoked
-                 ? "푸린님이 콕 한 장소에요!"
-                 : "폼폼님께 이 장소를 콕 하세요!")
-                .font(Font.theme.body2)
-                .foregroundColor(Color.gray02)
         }
     }
     private var placeDetailView: some View {
