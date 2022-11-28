@@ -26,6 +26,7 @@ struct LoginView: View {
             }
             
             loginButtons
+                .padding(.bottom, 51)
         }
     }
 }
