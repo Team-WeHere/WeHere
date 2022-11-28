@@ -18,8 +18,8 @@ final class FirebaseManager: NSObject {
     static let shared = FirebaseManager()
     private var currentNonce: String?
     lazy private var authorizationController = ASAuthorizationController(authorizationRequests: [createAppleIDRequest()])
-    private var appleLoginCompletion: (() -> Void)? = nil
-    
+    private let request = ASAuthorizationAppleIDProvider().createRequest()
+    private var loginLogic: (() -> Void)? = nil
     
     private override init() {
         super.init()
@@ -28,18 +28,14 @@ final class FirebaseManager: NSObject {
     }
     
     func touchUpAppleButton(completion: @escaping () -> Void) {
-//        request.requestedScopes = [.email, .fullName]
-        appleLoginCompletion = completion
+        loginLogic = completion
         authorizationController.performRequests()
     }
     
     @available(iOS 13, *)
     func createAppleIDRequest() -> ASAuthorizationAppleIDRequest {
-        let appleIDProvider = ASAuthorizationAppleIDProvider()
-        let request = appleIDProvider.createRequest()
         // 애플로그인은 사용자에게서 2가지 정보를 요구함
         request.requestedScopes = [.fullName, .email]
-        
         let nonce = randomNonceString()
         request.nonce = sha256(nonce)
         currentNonce = nonce
@@ -120,7 +116,7 @@ extension FirebaseManager: ASAuthorizationControllerDelegate {
             let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
             
             // 5️⃣
-            Task {
+            Task { [weak self] in
                 do {
                     let authData = try await Auth.auth().signIn(with: credential)
                     let userData = authData.user
@@ -131,6 +127,8 @@ extension FirebaseManager: ASAuthorizationControllerDelegate {
                         try await FirestoreDAO.shared.createUser(user: user)
                         FirestoreDAO.shared.user = user
                     }
+                    guard let loginLogic = self?.loginLogic else { return }
+                    loginLogic()
                 } catch {
                     print(error.localizedDescription)
                 }

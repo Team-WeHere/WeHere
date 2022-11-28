@@ -6,27 +6,34 @@
 //
 
 import SwiftUI
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
+import FirebaseAuth
 
 struct LoginView: View {
     @State var pageIndex = 1
+    @State var isLogin = false
+    
     var body: some View {
-        VStack {
-            TabView(selection: $pageIndex) {
-                firstPage
-                    .tag(1)
-                secondPage
-                    .tag(2)
-                thirdPage
-                    .tag(3)
+        NavigationStack {
+            VStack {
+                TabView(selection: $pageIndex) {
+                    firstPage
+                        .tag(1)
+                    secondPage
+                        .tag(2)
+                    thirdPage
+                        .tag(3)
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+                .onAppear {
+                    UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.gray02)
+                    UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.gray05)
+                }
+                loginButtons
+                    .padding(.bottom, 51)
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-            .onAppear {
-                UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.gray02)
-                UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.gray05)
-            }
-            
-            loginButtons
-                .padding(.bottom, 51)
         }
     }
 }
@@ -79,16 +86,38 @@ private extension LoginView {
 private extension LoginView {
     var loginButtons: some View {
         VStack(spacing: 14) {
-            Button(action: { KakaoLoginManager.shared.signInWithKakao() }) {
+            Button(action: {
+                kakaoLogin()
+            }, label: {
                 Image("SignInWithKakao")
-            }
+            })
+            
             Button(action: {
                 FirebaseManager.shared.touchUpAppleButton {
-                    print("DONE")
+                    self.isLogin = true
+                    print("HELLO")
                 }
             }, label: {
                 Image("SignInWithApple")
             })
+        }
+        .navigationDestination(isPresented: $isLogin, destination: { MainView() })
+    }
+    
+    func kakaoLogin() {
+        UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+            if let oauthToken = oauthToken {
+                Task {
+                    if let uid = oauthToken.idToken, !(try await FirestoreDAO.shared.isUserSignIn(userID: uid)) {
+                        let user = User(id: uid, email: nil, partnerID: nil)
+                        try await FirestoreDAO.shared.createUser(user: user)
+                        FirestoreDAO.shared.user = user
+                    }
+                }
+                self.isLogin = true
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
         }
     }
 }

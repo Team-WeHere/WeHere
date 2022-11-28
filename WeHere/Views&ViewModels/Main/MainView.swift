@@ -32,6 +32,9 @@ struct MainView: View {
                 Spacer()
             }
         }
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
     }
 }
 

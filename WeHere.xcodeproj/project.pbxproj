@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F1BBDAC2929D8E400318269 /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1BBDAB2929D8E400318269 /* KakaoLoginManager.swift */; };
 		5F33206D2902A984006B989F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33206C2902A984006B989F /* MainView.swift */; };
 		5F33206F2902A992006B989F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33206E2902A992006B989F /* MainViewModel.swift */; };
 		5F3320752902AAC5006B989F /* ExtentionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3320742902AAC5006B989F /* ExtentionExample.swift */; };
@@ -57,7 +56,6 @@
 
 /* Begin PBXFileReference section */
 		5F1BBDAA2929D78900318269 /* WeHere.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeHere.entitlements; sourceTree = "<group>"; };
-		5F1BBDAB2929D8E400318269 /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
 		5F33206C2902A984006B989F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5F33206E2902A992006B989F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5F3320742902AAC5006B989F /* ExtentionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionExample.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 				5F6196C32933D010008E4721 /* FirebaseManager.swift */,
 				5F6196C42933D010008E4721 /* FirestoreManager.swift */,
 				A75B09C72916B5D600869081 /* HapticManager.swift */,
-				5F1BBDAB2929D8E400318269 /* KakaoLoginManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -450,7 +447,6 @@
 				5F6196C82933D024008E4721 /* UserModel.swift in Sources */,
 				A7610A75292BB3A90030A79D /* MultipleStrokeHeartView.swift in Sources */,
 				5F3320752902AAC5006B989F /* ExtentionExample.swift in Sources */,
-				5F1BBDAC2929D8E400318269 /* KakaoLoginManager.swift in Sources */,
 				5F6196C52933D010008E4721 /* FirebaseManager.swift in Sources */,
 				5F5F0E67290EB70D0091CEB6 /* SearchResultCell.swift in Sources */,
 				5F33206F2902A992006B989F /* MainViewModel.swift in Sources */,
