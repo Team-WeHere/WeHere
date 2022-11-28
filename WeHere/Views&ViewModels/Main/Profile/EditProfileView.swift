@@ -49,8 +49,8 @@ struct EditProfileView: View {
             HStack {
                 TextField("", text: $userName)
                     .onChange(of: userName) { _ in
-                        if userName.count > 8 {
-                            let endIndex = userName.index(userName.startIndex, offsetBy: 8)
+                        if userName.count > 20 {
+                            let endIndex = userName.index(userName.startIndex, offsetBy: 20)
                             userName = String(userName[userName.startIndex..<endIndex])
                         }
                         isChange = true
@@ -59,7 +59,7 @@ struct EditProfileView: View {
                     .foregroundColor(.gray01)
                     .padding(.leading, 10)
                 
-                Text("\(userName.count) / 8")
+                Text("\(userName.count) / 20")
                     .foregroundColor(.gray02)
                     .font(.theme.body2)
             }
@@ -92,7 +92,6 @@ struct EditProfileView: View {
                     Image("man")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-    
                 })
                 .frame(width: 81, height: 81)
             }
