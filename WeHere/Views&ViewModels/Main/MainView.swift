@@ -46,6 +46,7 @@ struct MainView: View {
             }
         }
         .toolbar(.hidden)
+        .tint(.black)
     }
 }
 
@@ -79,4 +80,3 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
-
