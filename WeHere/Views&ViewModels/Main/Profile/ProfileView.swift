@@ -14,6 +14,7 @@ struct ProfileView: View {
     @State var showModal = false
     @State var userName = "우리요기"
     @State var image = "man"
+    
     var body: some View {
         VStack {
              Text("연결한지 \(countDay)일이 지났어요!")
@@ -34,7 +35,7 @@ struct ProfileView: View {
                     .sheet(isPresented: $showModal) {
                         EditProfileView(showModal: $showModal, userName: $userName, image: $image)
                     }
-                profileImage() 
+                profileImage()
             }
             .padding(.horizontal, 16)
             
