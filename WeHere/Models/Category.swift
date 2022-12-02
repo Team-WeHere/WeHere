@@ -7,8 +7,13 @@
 
 import SwiftUI
 
-struct Category {
+struct Category: Identifiable, Equatable, Hashable {
+    let id: Int
     let name: String
     let icon: String
     let color: Color
+    
+    static func == (lhs: Category, rhs: Category) -> Bool {
+        lhs.id == rhs.id
+    }
 }

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Select=Food, Unselect=unselect, size=Default.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

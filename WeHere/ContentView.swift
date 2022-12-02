@@ -8,47 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var hearts = 0
-    @State var isFloatingAnimieActivated = false
-    private let timer = Timer.publish(every: 2.5, on: .main, in: .common).autoconnect()
-    
-    func floatHeartAction() {
-        hearts += 7
-        isFloatingAnimieActivated = true
-    }
-  
+    @State var isPokeModalShown = false
     var body: some View {
         ZStack {
-            Color.black
-                .ignoresSafeArea()
-            
-            VStack {
-                Button {
-                    floatHeartAction()
-                } label: {
-                    Text("애니메이션!")
-                        .foregroundColor(Color.white)
-                }
-                .disabled(isFloatingAnimieActivated)
-                Spacer()
-                BottomModal()
-            }
-            
-            // MARK: Floating Heart Animation View
             VStack {
                 Spacer()
-                ForEach(0..<hearts, id: \.self) { _ in
-                    HeartView(width: 42, height: 42,
-                              hasStroke: false, image: "profile-girl")
-                    .modifier(PokeTapModifier())
-                    .padding()
-                    .onReceive(timer) { _ in
-                        hearts -= 1
-                        if hearts == 0 {
-                            isFloatingAnimieActivated = false
-                        }
+                HStack {
+                    Spacer()
+                    Button {
+                        isPokeModalShown.toggle()
+                    } label: {
+                        Text("모달을 띄워보세요")
                     }
+                    Spacer()
                 }
+                Spacer()
+            }
+            .background(isPokeModalShown ?
+                        Color.black.opacity(0.5)
+                        : Color.clear)
+ 
+            if isPokeModalShown {
+                PokeModal(isShown: $isPokeModalShown)
             }
         }
     }
